@@ -24,7 +24,7 @@ eureka:
 
 ---
 server:
-  port: 6001
+  port: 6002
 spring:
   profiles: prod
   application:
