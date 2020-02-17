@@ -3,7 +3,7 @@
     active: dev
 ---
 server:
-  port: 8002
+  port: 8001
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.wsf.springcloud.entities  # 所有Entity别名类所在包
@@ -36,13 +36,6 @@ eureka:
   instance:
     instanceId: ${spring.application.name}_hystrix:${server.port} # 等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
-
-# 在被监控服务上添加暴露端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
 
 ---
 server:
@@ -80,9 +73,3 @@ eureka:
     instanceId: ${spring.application.name}_hystrix:${server.port} # 等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
 
-# 在被监控服务上添加暴露端点
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
