@@ -32,7 +32,7 @@ eureka:
     serviceUrl: # 注册到哪一个Eureka Server服务注册中心，多个中间用逗号分隔
       #defaultZone: http://localhost:6001/eureka
 #      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
-      defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
   instance:
     instanceId: ${spring.application.name}_hystrix:${server.port} # 等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
@@ -75,7 +75,7 @@ eureka:
     serviceUrl: # 注册到哪一个Eureka Server服务注册中心，多个中间用逗号分隔
       #defaultZone: http://localhost:6001/eureka
       #      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
-      defaultZone: http://eureka6001.com:6001/eureka
+      defaultZone: http://eureka6001.com:6001/eureka,http://eureka6002.com:6002/eureka
   instance:
     instanceId: ${spring.application.name}_hystrix:${server.port} # 等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
