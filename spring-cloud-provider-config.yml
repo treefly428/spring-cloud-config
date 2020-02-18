@@ -36,6 +36,9 @@ eureka:
   instance:
     instanceId: ${spring.application.name}_hystrix:${server.port} # 等价于microservice-product:8001
     prefer-ip-address: true #访问路径就会显示成IP地址
+    
+emp:
+  name: wsf
 
 ---
 server:
