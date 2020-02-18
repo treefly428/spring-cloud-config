@@ -38,7 +38,7 @@ eureka:
     prefer-ip-address: true #访问路径就会显示成IP地址
     
 emp:
-  name: wsf
+  name: sf
 
 ---
 server:
